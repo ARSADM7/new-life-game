@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="New Life — protótipo de simulador de vida 3D para navegador.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>New Life — Protótipo</title>
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="renderCanvas" aria-label="Mundo 3D do jogo"></canvas>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">N</span><div><strong>NEW LIFE</strong><small>Uma nova vida começa aqui</small></div></div>
+      <div class="stats"><span id="cash">0 MT</span><span id="clock">08:00</span></div>
+    </header>
+    <section class="mission-card" aria-live="polite">
+      <small>PRIMEIRA MISSÃO</small><strong id="mission-title">Explora o teu novo bairro</strong>
+      <span id="mission-description">Encontra o ponto de trabalho junto à loja.</span>
+    </section>
+    <div class="center-message" id="center-message">Carregando o mundo…</div>
+    <div class="bottom-hud">
+      <div class="hint" id="hint">Usa o joystick ou as teclas WASD para andar.</div>
+      <div class="action-row">
+        <button id="camera-button" class="hud-button" type="button">Câmara: 3ª pessoa</button>
+        <button id="interact-button" class="hud-button primary" type="button" disabled>Interagir</button>
+      </div>
+    </div>
+    <div class="touch-controls" id="touch-controls">
+      <div class="joystick" id="joystick"><div class="stick" id="stick"></div></div>
+      <button id="jump-button" class="jump-button" type="button" aria-label="Saltar">↑</button>
+    </div>
+    <div class="loading" id="loading"><div class="loader"></div><span>A preparar Aurelia…</span></div>
+  </main>
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
